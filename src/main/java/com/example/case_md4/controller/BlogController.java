@@ -14,7 +14,7 @@ public class BlogController {
     IBlogService blogService;
     @GetMapping
     public ModelAndView showUser(){
-        ModelAndView modelAndView = new ModelAndView("views/blogList");
+        ModelAndView modelAndView = new ModelAndView("blog/blogList");
         modelAndView.addObject("manh", blogService.findAll());
         return modelAndView;
     }
