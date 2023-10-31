@@ -1,4 +1,4 @@
-package com.example.case_md4.service;
+package com.example.case_md4.service.category;
 
 import com.example.case_md4.model.Category;
 import com.example.case_md4.repository.ICategoryRepository;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 @Service
-public class CategoryService implements ICategoryService{
+public class CategoryService implements ICategoryService {
     @Autowired
     ICategoryRepository categoryRepository;
 

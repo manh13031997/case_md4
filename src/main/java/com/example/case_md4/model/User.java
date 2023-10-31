@@ -4,25 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Blog {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String content;
-    private String title;
-    private Date time;
+    private Long id;
+    private String name;
+    private String password;
     @ManyToOne
     private Category category;
-    @ManyToOne
-    private User user;
 }

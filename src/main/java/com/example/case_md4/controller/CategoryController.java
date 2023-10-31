@@ -1,6 +1,6 @@
 package com.example.case_md4.controller;
 
-import com.example.case_md4.service.ICategoryService;
+import com.example.case_md4.service.category.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
