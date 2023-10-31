@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Blog</h1>
+
+<a href="/manh/Create">
+    Tạo mới blog
+</a>
+<div >
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>content</th>
+            <th>title</th>
+            <th>time</th>
+
+        </tr>
+        <tr th:each="blog : ${manh}">
+            <td th:text="${blog.id}"></td>
+            <td th:text="${blog.getContent()}"></td>
+            <td th:text="${blog.getTitle()}"></td>
+            <td th:text="${blog.getTime()}"></td>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>

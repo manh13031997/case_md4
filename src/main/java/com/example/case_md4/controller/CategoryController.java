@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("/manh")
+@RequestMapping("/category")
 public class CategoryController {
     @Autowired
     ICategoryService categoryService;
 
     @GetMapping
     public ModelAndView showUser(){
-        ModelAndView modelAndView = new ModelAndView("/views/list");
+        ModelAndView modelAndView = new ModelAndView("views/categoryList");
         modelAndView.addObject("manh", categoryService.findAll());
         return modelAndView;
     }

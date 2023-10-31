@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -21,4 +21,6 @@ public class Blog {
     private String content;
     private String title;
     private Date time;
+    @ManyToOne
+    private Category category;
 }
