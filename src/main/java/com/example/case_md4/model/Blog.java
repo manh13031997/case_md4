@@ -3,6 +3,7 @@ package com.example.case_md4.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,6 +21,7 @@ public class Blog {
     private long id;
     private String content;
     private String title;
+    @CreationTimestamp
     private Date time;
     @ManyToOne
     private Category category;

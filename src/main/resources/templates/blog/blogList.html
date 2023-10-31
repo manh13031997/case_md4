@@ -7,7 +7,7 @@
 <body>
 <h1>Blog</h1>
 
-<a href="/manh/Create">
+<a href="/blog/blogCreate">
     Tạo mới blog
 </a>
 <div >
@@ -19,7 +19,7 @@
             <th>time</th>
 
         </tr>
-        <tr th:each="blog : ${manh}">
+        <tr th:each="blog : ${blog1}">
             <td th:text="${blog.id}"></td>
             <td th:text="${blog.getContent()}"></td>
             <td th:text="${blog.getTitle()}"></td>
