@@ -23,8 +23,7 @@ public class Blog {
     private String title;
     @CreationTimestamp
     private Date time;
-    @ManyToOne
-    private Category category;
+
     @ManyToOne
     private User user;
 }

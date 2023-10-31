@@ -1,6 +1,5 @@
 package com.example.case_md4.service.user;
 
-import com.example.case_md4.model.Category;
 import com.example.case_md4.model.User;
 import com.example.case_md4.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

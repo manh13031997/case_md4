@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -17,6 +17,8 @@
             <th>content</th>
             <th>title</th>
             <th>time</th>
+            <th>update</th>
+            <th>delete</th>
 
         </tr>
         <tr th:each="blog : ${blog1}">
@@ -24,6 +26,8 @@
             <td th:text="${blog.getContent()}"></td>
             <td th:text="${blog.getTitle()}"></td>
             <td th:text="${blog.getTime()}"></td>
+            <td><a th:href="@{/blog/delete/{id}(id=${blog.id})}">delete</a></td>
+            <td><a th:href="@{/blog/blogEdit/{id}(id=${blog.id})}">update</a></td>
         </tr>
 
     </table>
