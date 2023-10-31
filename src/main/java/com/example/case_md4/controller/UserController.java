@@ -20,7 +20,7 @@ public class UserController {
     @GetMapping
     public ModelAndView showUser(){
         ModelAndView modelAndView = new ModelAndView("user/userList");
-        modelAndView.addObject("manh", userService.findAll());
+        modelAndView.addObject("user1", userService.findAll());
         return modelAndView;
     }
     @GetMapping("/userCreate")

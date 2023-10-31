@@ -7,8 +7,9 @@
 <body>
 <h1>Category</h1>
 
-<a href="/manh/Create">
+<a href="/category/categoryCreate">
   Tạo mới category
+
 </a>
 <div >
   <table border="1">
@@ -18,10 +19,10 @@
       <th>status</th>
 
     </tr>
-    <tr th:each="user : ${manh}">
-      <td th:text="${user.id}"></td>
-      <td th:text="${user.getName()}"></td>
-      <td th:text="${user.getStatus()}"></td>
+    <tr th:each="ct : ${category1}">
+      <td th:text="${ct.id}"></td>
+      <td th:text="${ct.getName()}"></td>
+      <td th:text="${ct.getStatus()}"></td>
     </tr>
 
   </table>
