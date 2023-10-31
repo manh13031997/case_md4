@@ -16,12 +16,16 @@
             <th>#</th>
             <th>name</th>
             <th>password</th>
+            <th>update</th>
+            <th>delete</th>
 
         </tr>
         <tr th:each="user : ${user1}">
             <td th:text="${user.id}"></td>
             <td th:text="${user.getName()}"></td>
             <td th:text="${user.getPassword()}"></td>
+            <td><a th:href="@{/user/delete/{id}(id=${user.id})}">delete</a></td>
+            <td><a th:href="@{/user/userEdit/{id}(id=${user.id})}">update</a></td>
         </tr>
 
     </table>

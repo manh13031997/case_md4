@@ -3,10 +3,7 @@ package com.example.case_md4.controller;
 import com.example.case_md4.model.User;
 import com.example.case_md4.service.user.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.persistence.Id;
@@ -34,6 +31,26 @@ public class UserController {
     public ModelAndView save(User user){
         userService.save(user);
         ModelAndView modelAndView= new ModelAndView("redirect:/user");
+        return modelAndView;
+    }
+
+    @GetMapping("/userEdit/{id}")
+    public ModelAndView showEditForm(@PathVariable Long id){
+        ModelAndView modelAndView = new ModelAndView("/user/userEdit");
+        modelAndView.addObject("user1", userService.findById(id).get());
+        return modelAndView;
+    }
+    @PostMapping("/userEdit")
+    public ModelAndView update(User user){
+        userService.save(user);
+        ModelAndView modelAndView= new ModelAndView("redirect:/user");
+        return modelAndView;
+    }
+
+    @GetMapping("/delete/{id}")
+    public ModelAndView remove(@PathVariable Long id){
+        ModelAndView modelAndView= new ModelAndView("redirect:/user");
+        userService.remove(id);
         return modelAndView;
     }
 }
