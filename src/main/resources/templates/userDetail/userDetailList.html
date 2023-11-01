@@ -31,8 +31,8 @@
             <td th:text="${detail.getAge()}"></td>
             <td th:text="${detail.getAddress()}"></td>
             <td th:text="${detail.getEmail()}"></td>
-            <td><a th:href="@{/userDetail/delete/{id}(id=${detail.id})}" class="btn" >delete</a></td>
-            <td><a th:href="@{/userDetail/userDetailEdit/{id}(id=${detail.id})}" class="btn">update</a></td>
+            <td><a th:href="@{/userDetail/delete/{id}(id=${detail.id})}">delete</a></td>
+            <td><a th:href="@{/userDetail/userDetailEdit/{id}(id=${detail.id})}">update</a></td>
         </tr>
 
     </table>
