@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CREATE</title>
+</head>
+<body>
+<h1>Create userDetail</h1>
+<p>
+    <a href="/userDetail">userDetail create</a>
+</p>
+<!--<th:block th:if="${message}">-->
+<!--    <p th:text="${message}"></p>-->
+<!--</th:block>-->
+<form th:action="@{/userDetail/userDetailCreate}" th:object="${userDetail}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>age:</td>
+            <td><input type="text" th:field="*{age}"/></td>
+        </tr>
+        <tr>
+            <td>address:</td>
+            <td><input type="text" th:field="*{address}"/></td>
+        </tr>
+        <tr>
+            <td>email:</td>
+            <td><input type="text" th:field="*{email}"/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create user"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
