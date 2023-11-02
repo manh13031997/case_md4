@@ -10,10 +10,14 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Category {
+public class UserDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private int status;
+    private int age;
+    private String address;
+    private String email;
+    @OneToOne
+    private User user;
 }
