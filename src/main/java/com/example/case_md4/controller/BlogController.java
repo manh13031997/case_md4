@@ -1,6 +1,7 @@
 package com.example.case_md4.controller;
 
 import com.example.case_md4.model.Blog;
+import com.example.case_md4.service.blog.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
